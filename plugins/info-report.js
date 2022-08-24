@@ -1,5 +1,5 @@
 let handler = async (m, { conn, text, usedPrefix, command }) => {
-    if (!text) throw `📮kalo kamu ada keluhan tentang bug/eror ketik .report <keluhan> atau lainya klik\n\nCustomer Service\n📣Klik link berikut: wa.me/6288215689772`
+    if (!text) throw `📮kalo kamu ada keluhan tentang bug/eror ketik .report <keluhan> atau lainya klik\n\nCustomer Service\n📣Klik link berikut: wa.me/6288270863279`
     if (text.length < 10) throw `Laporan terlalu pendek, minimal 10 karakter!`
     if (text.length > 1000) throw `Laporan terlalu panjang, maksimal 1000 karakter!`
     let teks = `*${command.toUpperCase()}!*\n\nDari : *@${m.sender.split`@`[0]}*\n\nPesan : ${text}\n`
@@ -8,7 +8,7 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
             mentionedJid: [m.sender]
         }
     })
-    m.reply(`'_☑️Pesan terkirim kepemilik bot, jika ${command.toLowerCase()} hanya main-main tidak akan ditanggapi.\n\nJangan lupa cek info di https://fangzbot.websites.co.in/'_`)
+    m.reply(`'_☑️Pesan terkirim kepemilik bot, jika ${command.toLowerCase()} hanya main-main tidak akan ditanggapi.\n\nJangan lupa cek info di https://kanna.websites.co.in/'_`)
 }
 handler.help = ['report', 'request'].map(v => v + ' <teks>')
 handler.tags = ['info']
